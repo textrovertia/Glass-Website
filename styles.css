@@ -152,7 +152,10 @@ h3{
     border: none;
     width: 50%;
     border-radius: 2rem;
+    height: 2rem;
 }
+
+
 
 .games{
     margin: 5rem;
@@ -180,9 +183,28 @@ h3{
     background: linear-gradient(to right top, #65dfc9, #6cdbeb);
     width: 100%;
     height: 25%;
-    border-radius:2rem
+    border-radius:1rem; 
+    position: relative;
+    overflow: hidden;
+    
 }
 
 .progress::after{
-    content: '';
+    content: "`"; /* You need to do this every time you add the after or before pseudoelement, otherwise it's not gonna work */
+    width: 100%;
+    height: 100%;
+    background: rgb(236,236,236);
+    position: absolute;
+    left: 80%;
+    
+}
+
+.card-info{
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.percentage{
+    font-weight: bold;
 }
